@@ -12,11 +12,17 @@ class Tecnologia():
     def calcularDescuento(self, eficiencia, precio):
             lower = eficiencia
             if lower == ("a" or "b"):
-                  descuento = precio - (precio * 0.5)
+                  descuento = precio * 0.5
+                  total = precio - descuento
+                  return total
             elif lower == ("c" or "d"):
-                  descuento
+                  descuento = precio * 0.3
+                  total = precio - descuento
+                  return total
             elif lower == ("e" or "f"):
-                  pass
+                  descuento = precio * 0.1
+                  total = precio - descuento
+                  return total
             else:
                 print("No aplica descuento")
 
