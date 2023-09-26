@@ -9,19 +9,19 @@ class Tecnologia():
             pass
         
     #Debe devolver float
-    def calcularDescuento(self, eficiencia, precio):
-            lower = eficiencia
+    def calcularDescuento(self):
+            lower = self.__eficiencia
             if lower == ("a" or "b"):
-                  descuento = precio * 0.5
-                  total = precio - descuento
-                  return total
+                  descuento = self.__precio * 0.5
+                  total = self.__precio - descuento
+                  return print(f"\nDescuento: {descuento}\nTotal: {total}")
             elif lower == ("c" or "d"):
-                  descuento = precio * 0.3
-                  total = precio - descuento
+                  descuento = self.__precio * 0.3
+                  total = self.__precio - descuento
                   return total
             elif lower == ("e" or "f"):
-                  descuento = precio * 0.1
-                  total = precio - descuento
+                  descuento = self.__precio * 0.1
+                  total = self.__precio - descuento
                   return total
             else:
                 print("No aplica descuento")
