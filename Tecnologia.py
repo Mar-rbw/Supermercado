@@ -7,25 +7,27 @@ class Tecnologia():
 
     def Tecnologia(self ,marca: str, voltaje: int, precio: float, eficiencia: str):
             pass
-        
-    #Debe devolver float
+    
     def calcularDescuento(self):
-            lower = self.__eficiencia
-            if lower == ("a" or "b"):
-                  descuento = self.__precio * 0.5
-                  total = self.__precio - descuento
-                  return print(f"\nDescuento: {descuento}\nTotal: {total}")
-            elif lower == ("c" or "d"):
-                  descuento = self.__precio * 0.3
-                  total = self.__precio - descuento
-                  return total
-            elif lower == ("e" or "f"):
-                  descuento = self.__precio * 0.1
-                  total = self.__precio - descuento
-                  return total
+            nivelEficiencia = self.__eficiencia.upper()
+            if nivelEficiencia in ["A", "B"]:
+                  descuento = 0.5
+                  precioDescuento = self.__precio * 0.5
+                  descuentoAplicado  = self.__precio * (1 - descuento)
+                  return descuentoAplicado
+            
+            elif nivelEficiencia in ["C", "D"]:
+                  precioDescuento = self.__precio * 0.3
+                  descuentoAplicado  = self.__precio * (1 - descuento)
+                  return descuentoAplicado
+            elif nivelEficiencia in ["E", "F"]:
+                  precioDescuento = self.__precio * 0.1
+                  descuentoAplicado  = self.__precio * (1 - descuento)
+                  return descuentoAplicado
             else:
                 print("No aplica descuento")
-
+            
+            
     def __str__(self) -> str:
           text = f"Marca: {self.__marca}"
           text += f"\nVoltaje: {self.__voltaje}"
