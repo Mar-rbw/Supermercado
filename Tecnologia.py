@@ -47,5 +47,5 @@ class Tecnologia():
           text += f"\nPrecio: {self.__precio}"
           return text
     
-PRODUCTO1 = Tecnologia(30, 90.8, "C", "Sushipleto")
-PRODUCTO1.calcularDescuento() 
+""" PRODUCTO1 = Tecnologia(30, 90.8, "C", "Sushipleto")
+PRODUCTO1.calcularDescuento()  """
