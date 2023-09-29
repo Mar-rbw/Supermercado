@@ -33,3 +33,4 @@ class Tecnologia():
           text += f"\nVoltaje: {self.__voltaje}"
           text += f"\nEficiencia: {self.__eficiencia}"
           text += f"\nPrecio: {self.__precio}"
+          return text

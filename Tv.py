@@ -4,7 +4,7 @@ class Tv(Tecnologia):
     def __init__(self, voltaje: int, precio: float, eficiencia: str, marca: str, tamanio: float):
         super().__init__(voltaje, precio, eficiencia, marca)
         self.__tamanio = tamanio
-        
+    
     def Tv(self, marca: str, voltaje: int, precio: float, eficiencia: str, tamanio: float):
         pass
     
@@ -15,4 +15,5 @@ class Tv(Tecnologia):
         return f"{super().__str__()}\nTamaño: {self.__tamanio} "
 
     
-    
+producto1 = Tv( 30, 5000.2, "A", "Sega", 30.2)
+print(producto1)
