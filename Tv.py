@@ -12,8 +12,8 @@ class Tv(Tecnologia):
         return super().calcularDescuento()
 
     def __str__(self) -> str:
-        return f"{super().__str__()}\nTamaño: {self.__tamanio} "
+        return f"{super().__str__()}\nTamaño: {self.__tamanio}\nDescuento: {calcularDescuento()}"
 
     
-producto1 = Tv( 30, 5000.2, "A", "Sega", 30.2)
+producto1 = Tv( 30, 5000.2, "C", "Sega", 30.2)
 print(producto1)
