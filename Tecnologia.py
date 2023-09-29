@@ -13,16 +13,26 @@ class Tecnologia():
             if nivelEficiencia in ["A", "B"]:
                   descuento = 0.5
                   precioDescuento = self.__precio * 0.5
+                  print(f"Precio del descuento: {precioDescuento}")
                   descuentoAplicado  = self.__precio * (1 - descuento)
+                  print(f"Precio aplicado al producto: {descuentoAplicado}")
                   return descuentoAplicado
             
             elif nivelEficiencia in ["C", "D"]:
+                  descuento = 0.3
                   precioDescuento = self.__precio * 0.3
+                  print(f"Precio del descuento: {precioDescuento}")
                   descuentoAplicado  = self.__precio * (1 - descuento)
+                  print(f"Precio aplicado al producto: {descuentoAplicado}")
+                  print(f"Ecuacion {descuento}: {self.__precio} - {precioDescuento} = {descuentoAplicado}")
                   return descuentoAplicado
+            
             elif nivelEficiencia in ["E", "F"]:
+                  descuento = 0.1
                   precioDescuento = self.__precio * 0.1
+                  print(f"Precio del descuento: {precioDescuento}")
                   descuentoAplicado  = self.__precio * (1 - descuento)
+                  print(f"Precio aplicado al producto: {descuentoAplicado}")
                   return descuentoAplicado
             else:
                 print("No aplica descuento")
@@ -34,3 +44,6 @@ class Tecnologia():
           text += f"\nEficiencia: {self.__eficiencia}"
           text += f"\nPrecio: {self.__precio}"
           return text
+    
+PRODUCTO1 = Tecnologia(30, 90.8, "C", "Sushipleto")
+PRODUCTO1.calcularDescuento()
