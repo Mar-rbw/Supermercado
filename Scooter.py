@@ -1,15 +1,20 @@
 from Transporte import Transporte
+from Tecnologia import Tecnologia
 
-class Scooter(Transporte):
-    def __init__(self,aro: float, peso: float, precio: float, marca: int, costoDespachoBase: int = 4000 ):
-        super().__init__(costoDespachoBase)
+class Scooter(Transporte, Tecnologia):
+    def __init__(self, voltaje: int, precio: float, eficiencia: str, marca: str, aro: float, velocidad: int, peso: float, costoDespachoBase: int = 4000):
+        Transporte().__init__(self, costoDespachoBase)
+        Tecnologia().__init__(self, voltaje, precio, eficiencia, marca)
         self.__aro = aro
-        self.__peso = peso #300 valor x kilo
-        self.__precio = precio
-        self.__marca = marca
+        self.__velocidad = velocidad
+        self.__peso = peso
         
-    def scooter(self, marca: str, voltaje: int, precio: int, eficiente: str):
-        pass
-
-    def calcularDespacho(self):
-        pass
+    def calcularDescuento(self):
+        return Transporte.calcularDespacho()
+    
+    def __str__(self) -> str:
+        return f"{Tecnologia().__str__()}\nAro: {self.__aro}\nVelocidad: {self.__velocidad}\nPeso: {self.__peso}"
+        
+    
+PRODUCTO1 = Scooter(30, 90.8, "C", "Sushipleto", 20.1, 100, 100.4, 10000)
+print(PRODUCTO1)

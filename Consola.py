@@ -10,10 +10,20 @@ class Consola(Tecnologia):
         super().__init__(voltaje, precio, eficiencia, marca)
         self.__nombreConsola = nombreConsola
         self.__version = version
+        
 
     def calcularDescuento(self):
-        return super().calcularDescuento()
-    ## Como le hacemos con el agregarle el 5 % usando poo 
+        descuento, total = super().calcularDescuento()
+        if "Lite" in self.__version.capitalize():
+            descuentoAdicionalLite = 0.05
+            descuento *= (1 + descuentoAdicionalLite)
+            total *= (1 - descuentoAdicionalLite)
+            return descuento, total
+        else:
+            pass
+        
+
     def __str__(self) -> str:
         precioDescuento, TotalPagar = self.calcularDescuento()
-        return f"{super().__str__()}\nNombre de la consola: {self.__nombreConsola}\nVersión: {self.__version}\nDescuento: {precioDescuento}\nTotal a pagar: {TotalPagar}"
+        return f"{super().__str__()}\nNombre de la consola: {self.__nombreConsola.capitalize()}\nVersión: {self.__version.capitalize()}\nDescuento: {precioDescuento}\nTotal a pagar: {TotalPagar}"
+    
