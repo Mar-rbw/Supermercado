@@ -1,3 +1,8 @@
+""" 
+Las Consolas que sean de la versión Lite reciben un descuento adicional de 5%. (Sumar al descuento de eficiencia).
+Las Consolas además de mostrar las características generales deberá indicar el nombre de la Consola,
+su versión, el descuento aplicado y el valor total luego del descuento.
+ """
 from Tecnologia import Tecnologia
 
 class Consola(Tecnologia):
@@ -6,12 +11,9 @@ class Consola(Tecnologia):
         self.__nombreConsola = nombreConsola
         self.__version = version
 
-    def Consola(self, nombreConsola: str, version: str, marca: str, voltaje: int, precio: float, eficiencia: int):
-        pass
-
     def calcularDescuento(self):
-        pass
+        return super().calcularDescuento()
     ## Como le hacemos con el agregarle el 5 % usando poo 
     def __str__(self) -> str:
-        txt =  super().__str__()
-        txt += f"\nNombre: {self.__nombreConsola}\nVersion: {self.__version}"
+        precioDescuento, TotalPagar = self.calcularDescuento()
+        return f"{super().__str__()}\nNombre de la consola: {self.__nombreConsola}\nVersión: {self.__version}\nDescuento: {precioDescuento}\nTotal a pagar: {TotalPagar}"

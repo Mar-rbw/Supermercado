@@ -4,38 +4,36 @@ class Tecnologia():
         self.__precio = precio
         self.__eficiencia = eficiencia
         self.__marca = marca
-
-    def Tecnologia(self ,marca: str, voltaje: int, precio: float, eficiencia: str):
-            pass
+        
     
     def calcularDescuento(self):
             nivelEficiencia = self.__eficiencia.upper()
             if nivelEficiencia in ["A", "B"]:
                   descuento = 0.5
-                  precioDescuento = self.__precio * 0.5
-                  print(f"Precio del descuento: {precioDescuento}")
-                  descuentoAplicado  = self.__precio * (1 - descuento)
-                  print(f"Precio aplicado al producto: {descuentoAplicado}")
-                  print(f"Ecuacion {descuento}: {self.__precio} - {precioDescuento} = {descuentoAplicado}")
-                  return descuentoAplicado
+                  descuentoAplicado = self.__precio * 0.5
+                  print(f"Precio del descuento: {descuentoAplicado}")
+                  totalPagar  = self.__precio * (1 - descuento)
+                  print(f"Precio aplicado al producto: {totalPagar}")
+                  print(f"Ecuacion {descuento}: {self.__precio} - {descuentoAplicado} = {totalPagar}")
+                  return descuentoAplicado, totalPagar
             
             elif nivelEficiencia in ["C", "D"]:
                   descuento = 0.3
-                  precioDescuento = self.__precio * 0.3
-                  print(f"Precio del descuento: {precioDescuento}")
-                  descuentoAplicado  = self.__precio * (1 - descuento)
-                  print(f"Precio aplicado al producto: {descuentoAplicado}")
-                  print(f"Ecuacion {descuento}: {self.__precio} - {precioDescuento} = {descuentoAplicado}")
-                  return descuentoAplicado
+                  descuentoAplicado = self.__precio * 0.3
+                  print(f"Precio del descuento: {descuentoAplicado}")
+                  totalPagar  = self.__precio * (1 - descuento)
+                  print(f"Descuento aplicado al producto: {totalPagar}")
+                  print(f"Ecuacion {descuento}: {self.__precio} - {descuentoAplicado} = {totalPagar}")
+                  return descuentoAplicado, totalPagar
             
             elif nivelEficiencia in ["E", "F"]:
                   descuento = 0.1
-                  precioDescuento = self.__precio * 0.1
-                  print(f"Precio del descuento: {precioDescuento}")
-                  descuentoAplicado  = self.__precio * (1 - descuento)
-                  print(f"Precio aplicado al producto: {descuentoAplicado}")
-                  print(f"Ecuacion {descuento}: {self.__precio} - {precioDescuento} = {descuentoAplicado}")
-                  return descuentoAplicado
+                  descuentoAplicado = self.__precio * 0.1
+                  print(f"Precio del descuento: {descuentoAplicado}")
+                  totalPagar  = self.__precio * (1 - descuento)
+                  print(f"Descuento aplicado al producto: {totalPagar}")
+                  print(f"Ecuacion {descuento}: {self.__precio} - {descuentoAplicado} = {totalPagar}")
+                  return descuentoAplicado, totalPagar
             else:
                 print("No aplica descuento")
             
