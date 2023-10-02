@@ -1,8 +1,3 @@
-""" 
-Las Consolas que sean de la versión Lite reciben un descuento adicional de 5%. (Sumar al descuento de eficiencia).
-Las Consolas además de mostrar las características generales deberá indicar el nombre de la Consola,
-su versión, el descuento aplicado y el valor total luego del descuento.
- """
 from Tecnologia import Tecnologia
 
 class Consola(Tecnologia):
@@ -10,6 +5,23 @@ class Consola(Tecnologia):
         super().__init__(voltaje, precio, eficiencia, marca)
         self.__nombreConsola = nombreConsola
         self.__version = version
+
+    @property
+    def _nombreConsola(self):
+        return self.__nombreConsola
+
+    @_nombreConsola.setter
+    def _nombreConsola(self, value):
+        self.__nombreConsola = value
+
+    @property
+    def _version(self):
+        return self.__version
+
+    @_version.setter
+    def _version(self, value):
+        self.__version = value
+
         
 
     def calcularDescuento(self):

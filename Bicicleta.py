@@ -7,6 +7,39 @@ class Bicicleta(Transporte):
         self.__peso = peso
         self.__precio = precio
         self.__marca = marca
+
+    @property
+    def _aro(self):
+        return self.__aro
+
+    @_aro.setter
+    def _aro(self, value):
+        self.__aro = value
+
+    @property
+    def _peso(self):
+        return self.__peso
+
+    @_peso.setter
+    def _peso(self, value):
+        self.__peso = value
+
+    @property
+    def _precio(self):
+        return self.__precio
+
+    @_precio.setter
+    def _precio(self, value):
+        self.__precio = value
+
+    @property
+    def _marca(self):
+        return self.__marca
+
+    @_marca.setter
+    def _marca(self, value):
+        self.__marca = value
+
         
     def calcularDespacho(self):
         valorKilo = 400

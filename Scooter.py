@@ -8,6 +8,31 @@ class Scooter(Transporte, Tecnologia):
         self.__aro = aro
         self.__velocidad = velocidad
         self.__peso = peso
+
+    @property
+    def _aro(self):
+        return self.__aro
+
+    @_aro.setter
+    def _aro(self, value):
+        self.__aro = value
+
+    @property
+    def _velocidad(self):
+        return self.__velocidad
+
+    @_velocidad.setter
+    def _velocidad(self, value):
+        self.__velocidad = value
+
+    @property
+    def _peso(self):
+        return self.__peso
+
+    @_peso.setter
+    def _peso(self, value):
+        self.__peso = value
+
         
     def calcularDespacho(self):
         valorKilo = 300
@@ -22,7 +47,4 @@ class Scooter(Transporte, Tecnologia):
         costoDespacho = self.calcularDespacho()
         TotalDespachoDescuento = totalPagarDescuento + costoDespacho
         return f"{super().__str__()}\nAro: {self.__aro}\nVelocidad: {self.__velocidad}\nPeso: {self.__peso}\nDescuento: {precioDescuento}\nCosto del despacho: {costoDespacho}\nValor Total: {TotalDespachoDescuento}"
-        
-
-PRODUCTO1 = Scooter(30, 90.8, "C", "Sushipleto", 20.1, 100, 100.4)
-print(PRODUCTO1)
+    

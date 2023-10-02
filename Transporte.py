@@ -1,6 +1,3 @@
-#•	Los Transportes tienen un costo adicional en relación al despacho.
-# El costo base del despacho es de $4000 sumado al valor por kg.
-
 class Transporte:
     
     COSTO_DESPACHO_BASE: int = 4000
