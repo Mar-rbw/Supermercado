@@ -66,21 +66,6 @@ def registrarBicicleta():
 
     print("Bicicleta registrada con éxito.")
     
-    
-""" def cotizarTvs():
-    if not listaTVs:
-        print("No hay TVs registrados.")
-        return
-
-    print("Cotización de TVs:")
-    for index, tv in enumerate(listaTVs, start=1):
-        print(f"TV {index}:")
-        print(f"Marca: {tv.get_marca()}")
-        print(f"Voltaje: {tv.get_voltaje()}")
-        print(f"Precio: {tv.get_precio()}")
-        print(f"Eficiencia: {tv.get_eficiencia()}")
-        print(f"Tamaño: {tv.get_tamanio()} pulgadas")
-         """
 def cotizarTvs():
     if not listaTVs:
         print("No hay TVs registrados.")
